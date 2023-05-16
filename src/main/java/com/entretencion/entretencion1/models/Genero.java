@@ -10,11 +10,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Genero")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity(name = "Genero")
 public class Genero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
