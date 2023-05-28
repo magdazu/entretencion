@@ -10,7 +10,8 @@ import com.entretencion.entretencion1.models.Categoria;
 import com.entretencion.entretencion1.repositories.CategoriaRepository;
 
 @Service
-@Transactional
+@Transactional // abre una transaccion en la base de datos, sirve para aplicar rollback en caso
+               // de mal ingreso de datos.
 public class CategoriaService {
 
     private CategoriaRepository categoriaRepository;

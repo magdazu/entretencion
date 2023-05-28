@@ -3,7 +3,7 @@ package com.entretencion.entretencion1.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +13,10 @@ import com.entretencion.entretencion1.models.Contenido;
 import com.entretencion.entretencion1.services.ContenidoService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@Controller
 @CrossOrigin("*")
 @RestController
 public class ContenidoController {
@@ -27,9 +27,11 @@ public class ContenidoController {
         this.contenidoService = contenidoService;
     }
 
-    @PostMapping("/contenido/save")
+    @RequestMapping("/contenido/save")
+    @PostMapping
     public void guardarContenido(@RequestBody Contenido contenido) {
         contenidoService.saveContenido(contenido);
+        System.out.println("Se ingreso correctamente el contenido");
     }
 
     @PutMapping("/contenido/update")
