@@ -20,4 +20,5 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoria_id;
     private String nombre_categoria;
+
 }

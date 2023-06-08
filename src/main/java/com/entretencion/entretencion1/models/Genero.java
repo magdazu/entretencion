@@ -1,6 +1,5 @@
 package com.entretencion.entretencion1.models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,4 +20,5 @@ public class Genero {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer genero_id;
     private String nombre_genero;
+
 }
