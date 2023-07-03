@@ -49,8 +49,8 @@ public class ContenidoController {
         return contenidoService.findAll();
     }
 
-    @GetMapping("/contenido/contenidoBynombreDesc")
+    @GetMapping("/contenido/contenidoBynombre")
     public List<Contenido> obtenerNombreDesc() {
-        return contenidoService.findContenidoBynombreDesc();
+        return contenidoService.findContenidoBynombre();
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.entretencion.entretencion1.models.Contenido;
 
 public interface ContenidoRepository extends JpaRepository<Contenido, Integer> {
-    @Query(value = "SELECT * FROM Contenido ORDER BY nombreContenido DESC", nativeQuery = true)
-    List<Contenido> findContenidoOrderbynombreDesc();
+    @Query(value = "SELECT * FROM Contenido ORDER BY titulo", nativeQuery = true)
+    List<Contenido> findContenidoOrderbynombre();
 
 }

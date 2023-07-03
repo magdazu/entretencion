@@ -35,8 +35,8 @@ public class ContenidoService {
         return contenidoRepository.findAll();
     }
 
-    public List<Contenido> findContenidoBynombreDesc() {
-        return contenidoRepository.findContenidoOrderbynombreDesc();
+    public List<Contenido> findContenidoBynombre() {
+        return contenidoRepository.findContenidoOrderbynombre();
     }
 
 }
